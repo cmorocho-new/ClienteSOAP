@@ -1,5 +1,5 @@
 
-package ec.edu.ups;
+package ec.edu.ups.servicios;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,17 +7,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para transaccionRetiro complex type.
+ * <p>Clase Java para transaccionTransferencia complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="transaccionRetiro">
+ * &lt;complexType name="transaccionTransferencia">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="arg1" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="arg1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="arg2" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,14 +28,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "transaccionRetiro", propOrder = {
+@XmlType(name = "transaccionTransferencia", propOrder = {
     "arg0",
-    "arg1"
+    "arg1",
+    "arg2"
 })
-public class TransaccionRetiro {
+public class TransaccionTransferencia {
 
     protected String arg0;
-    protected double arg1;
+    protected String arg1;
+    protected double arg2;
 
     /**
      * Obtiene el valor de la propiedad arg0.
@@ -63,17 +66,41 @@ public class TransaccionRetiro {
     /**
      * Obtiene el valor de la propiedad arg1.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getArg1() {
+    public String getArg1() {
         return arg1;
     }
 
     /**
      * Define el valor de la propiedad arg1.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setArg1(double value) {
+    public void setArg1(String value) {
         this.arg1 = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad arg2.
+     * 
+     */
+    public double getArg2() {
+        return arg2;
+    }
+
+    /**
+     * Define el valor de la propiedad arg2.
+     * 
+     */
+    public void setArg2(double value) {
+        this.arg2 = value;
     }
 
 }

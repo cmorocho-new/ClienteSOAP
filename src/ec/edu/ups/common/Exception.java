@@ -1,23 +1,22 @@
 
-package ec.edu.ups;
+package ec.edu.ups.common;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para transaccionDepostioResponse complex type.
+ * <p>Clase Java para Exception complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="transaccionDepostioResponse">
+ * &lt;complexType name="Exception">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,36 +26,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "transaccionDepostioResponse", propOrder = {
-    "_return"
+@XmlType(name = "Exception", propOrder = {
+    "message"
 })
-public class TransaccionDepostioResponse {
+public class Exception {
 
-    @XmlElement(name = "return")
-    protected String _return;
+    protected String message;
 
     /**
-     * Obtiene el valor de la propiedad return.
+     * Obtiene el valor de la propiedad message.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getReturn() {
-        return _return;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * Define el valor de la propiedad return.
+     * Define el valor de la propiedad message.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setReturn(String value) {
-        this._return = value;
+    public void setMessage(String value) {
+        this.message = value;
     }
 
 }

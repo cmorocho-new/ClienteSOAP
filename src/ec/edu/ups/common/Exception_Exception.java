@@ -1,5 +1,5 @@
 
-package ec.edu.ups;
+package ec.edu.ups.common;
 
 import javax.xml.ws.WebFault;
 
@@ -13,7 +13,7 @@ import javax.xml.ws.WebFault;
 @WebFault(name = "Exception", targetNamespace = "http://servicios.ups.edu.ec/")
 public class Exception_Exception extends java.lang.Exception {
     
-    private ec.edu.ups.Exception exception;
+    private ec.edu.ups.common.Exception exception;
 
     public Exception_Exception() {
         super();
@@ -27,17 +27,17 @@ public class Exception_Exception extends java.lang.Exception {
         super(message, cause);
     }
 
-    public Exception_Exception(String message, ec.edu.ups.Exception exception) {
+    public Exception_Exception(String message, ec.edu.ups.common.Exception exception) {
         super(message);
         this.exception = exception;
     }
 
-    public Exception_Exception(String message, ec.edu.ups.Exception exception, Throwable cause) {
+    public Exception_Exception(String message, ec.edu.ups.common.Exception exception, Throwable cause) {
         super(message, cause);
         this.exception = exception;
     }
 
-    public ec.edu.ups.Exception getFaultInfo() {
+    public ec.edu.ups.common.Exception getFaultInfo() {
         return this.exception;
     }
 }

@@ -1,6 +1,12 @@
 
-package ec.edu.ups;
+package ec.edu.ups.common;
 
+import ec.edu.ups.servicios.TransaccionDepostio;
+import ec.edu.ups.servicios.TransaccionDepostioResponse;
+import ec.edu.ups.servicios.TransaccionRetiro;
+import ec.edu.ups.servicios.TransaccionRetiroResponse;
+import ec.edu.ups.servicios.TransaccionTransferencia;
+import ec.edu.ups.servicios.TransaccionTransferenciaResponse;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;

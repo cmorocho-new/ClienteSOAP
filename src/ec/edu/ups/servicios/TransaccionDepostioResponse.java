@@ -1,5 +1,5 @@
 
-package ec.edu.ups;
+package ec.edu.ups.servicios;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para transaccionTransferenciaResponse complex type.
+ * <p>Clase Java para transaccionDepostioResponse complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="transaccionTransferenciaResponse">
+ * &lt;complexType name="transaccionDepostioResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "transaccionTransferenciaResponse", propOrder = {
+@XmlType(name = "transaccionDepostioResponse", propOrder = {
     "_return"
 })
-public class TransaccionTransferenciaResponse {
+public class TransaccionDepostioResponse {
 
     @XmlElement(name = "return")
     protected String _return;

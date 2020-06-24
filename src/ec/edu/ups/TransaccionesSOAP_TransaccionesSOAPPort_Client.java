@@ -6,6 +6,9 @@ package ec.edu.ups;
  * This class is not complete
  */
 
+import ec.edu.ups.common.Exception_Exception;
+import ec.edu.ups.servicios.TransaccionesSOAP;
+import ec.edu.ups.servicios.TransaccionesSOAPService;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;

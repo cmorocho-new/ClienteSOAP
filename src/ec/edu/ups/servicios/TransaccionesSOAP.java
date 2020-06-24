@@ -1,5 +1,7 @@
-package ec.edu.ups;
+package ec.edu.ups.servicios;
 
+import ec.edu.ups.common.Exception_Exception;
+import ec.edu.ups.common.ObjectFactory;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -19,8 +21,8 @@ import javax.xml.ws.ResponseWrapper;
 public interface TransaccionesSOAP {
 
     @WebMethod
-    @RequestWrapper(localName = "transaccionDepostio", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.TransaccionDepostio")
-    @ResponseWrapper(localName = "transaccionDepostioResponse", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.TransaccionDepostioResponse")
+    @RequestWrapper(localName = "transaccionDepostio", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.servicios.TransaccionDepostio")
+    @ResponseWrapper(localName = "transaccionDepostioResponse", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.servicios.TransaccionDepostioResponse")
     @WebResult(name = "return", targetNamespace = "")
     public java.lang.String transaccionDepostio(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -30,8 +32,8 @@ public interface TransaccionesSOAP {
     ) throws Exception_Exception;
 
     @WebMethod
-    @RequestWrapper(localName = "transaccionTransferencia", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.TransaccionTransferencia")
-    @ResponseWrapper(localName = "transaccionTransferenciaResponse", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.TransaccionTransferenciaResponse")
+    @RequestWrapper(localName = "transaccionTransferencia", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.servicios.TransaccionTransferencia")
+    @ResponseWrapper(localName = "transaccionTransferenciaResponse", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.servicios.TransaccionTransferenciaResponse")
     @WebResult(name = "return", targetNamespace = "")
     public java.lang.String transaccionTransferencia(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -43,8 +45,8 @@ public interface TransaccionesSOAP {
     );
 
     @WebMethod
-    @RequestWrapper(localName = "transaccionRetiro", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.TransaccionRetiro")
-    @ResponseWrapper(localName = "transaccionRetiroResponse", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.TransaccionRetiroResponse")
+    @RequestWrapper(localName = "transaccionRetiro", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.servicios.TransaccionRetiro")
+    @ResponseWrapper(localName = "transaccionRetiroResponse", targetNamespace = "http://servicios.ups.edu.ec/", className = "ec.edu.ups.servicios.TransaccionRetiroResponse")
     @WebResult(name = "return", targetNamespace = "")
     public java.lang.String transaccionRetiro(
         @WebParam(name = "arg0", targetNamespace = "")

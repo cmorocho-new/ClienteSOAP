@@ -1,4 +1,4 @@
-package ec.edu.ups;
+package ec.edu.ups.servicios;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,7 +15,7 @@ import javax.xml.ws.Service;
  * 
  */
 @WebServiceClient(name = "TransaccionesSOAPService", 
-                  wsdlLocation = "file:/C:/Users/DAMINS~1/AppData/Local/Temp/tempdir2685743056716228363.tmp/TransaccionesSOAP_1.wsdl",
+                  wsdlLocation = "file:TransaccionesSOAP_1.wsdl",
                   targetNamespace = "http://servicios.ups.edu.ec/") 
 public class TransaccionesSOAPService extends Service {
 
@@ -26,11 +26,11 @@ public class TransaccionesSOAPService extends Service {
     static {
         URL url = null;
         try {
-            url = new URL("file:/C:/Users/DAMINS~1/AppData/Local/Temp/tempdir2685743056716228363.tmp/TransaccionesSOAP_1.wsdl");
+            url = new URL("file:TransaccionesSOAP_1.wsdl");
         } catch (MalformedURLException e) {
             java.util.logging.Logger.getLogger(TransaccionesSOAPService.class.getName())
                 .log(java.util.logging.Level.INFO, 
-                     "Can not initialize the default wsdl from {0}", "file:/C:/Users/DAMINS~1/AppData/Local/Temp/tempdir2685743056716228363.tmp/TransaccionesSOAP_1.wsdl");
+                     "Can not initialize the default wsdl from {0}", "file:/TransaccionesSOAP_1.wsdl");
         }
         WSDL_LOCATION = url;
     }
