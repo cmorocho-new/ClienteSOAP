@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "transaccionDepostioResponse", propOrder = {
+@XmlType(name = "transaccionDepositoResponse", propOrder = {
     "_return"
 })
-public class TransaccionDepostioResponse {
+public class transaccionDepositoResponse {
 
     @XmlElement(name = "return")
     protected String _return;

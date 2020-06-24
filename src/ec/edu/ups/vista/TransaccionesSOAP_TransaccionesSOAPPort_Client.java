@@ -59,22 +59,26 @@ public final class TransaccionesSOAP_TransaccionesSOAPPort_Client {
         try {
             java.lang.String _transaccionDepostio__return = port.transaccionDepostio(_transaccionDepostio_arg0, _transaccionDepostio_arg1);
             System.out.println("transaccionDepostio.result=" + _transaccionDepostio__return);
-
         } catch (Exception_Exception e) { 
             System.out.println("Expected exception: Exception has occurred.");
             System.out.println(e.toString());
         }
-            }
+        }
+        
         {
         System.out.println("Invoking transaccionTransferencia...");
         java.lang.String _transaccionTransferencia_arg0 = "";
         java.lang.String _transaccionTransferencia_arg1 = "";
         double _transaccionTransferencia_arg2 = 0.0;
-        java.lang.String _transaccionTransferencia__return = port.transaccionTransferencia(_transaccionTransferencia_arg0, _transaccionTransferencia_arg1, _transaccionTransferencia_arg2);
-        System.out.println("transaccionTransferencia.result=" + _transaccionTransferencia__return);
-
-
+         try {
+            java.lang.String _transaccionTransferencia__return = port.transaccionTransferencia(_transaccionTransferencia_arg0, _transaccionTransferencia_arg1, _transaccionTransferencia_arg2);
+            System.out.println("transaccionTransferencia.result=" + _transaccionTransferencia__return);
+        } catch (Exception_Exception e) { 
+            System.out.println("Expected exception: Exception has occurred.");
+            System.out.println(e.toString());
         }
+        }
+        
         {
         System.out.println("Invoking transaccionRetiro...");
         java.lang.String _transaccionRetiro_arg0 = "";
@@ -82,12 +86,11 @@ public final class TransaccionesSOAP_TransaccionesSOAPPort_Client {
         try {
             java.lang.String _transaccionRetiro__return = port.transaccionRetiro(_transaccionRetiro_arg0, _transaccionRetiro_arg1);
             System.out.println("transaccionRetiro.result=" + _transaccionRetiro__return);
-
         } catch (Exception_Exception e) { 
             System.out.println("Expected exception: Exception has occurred.");
             System.out.println(e.toString());
         }
-            }
+        }
 
         System.exit(0);
     }

@@ -80,6 +80,7 @@
     <wsdl:operation name="transaccionTransferencia">
       <wsdl:input message="tns:transaccionTransferencia" name="transaccionTransferencia"/>
       <wsdl:output message="tns:transaccionTransferenciaResponse" name="transaccionTransferenciaResponse"/>
+	  <wsdl:fault message="tns:Exception" name="Exception"/>
     </wsdl:operation>
     <wsdl:operation name="transaccionRetiro">
       <wsdl:input message="tns:transaccionRetiro" name="transaccionRetiro"/>
@@ -109,6 +110,9 @@
       <wsdl:output name="transaccionTransferenciaResponse">
         <soap:body use="literal"/>
       </wsdl:output>
+	  <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="transaccionRetiro">
       <soap:operation soapAction="" style="document"/>

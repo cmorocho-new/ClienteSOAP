@@ -1,8 +1,8 @@
 
 package ec.edu.ups.common;
 
-import ec.edu.ups.servicios.TransaccionDepostio;
-import ec.edu.ups.servicios.TransaccionDepostioResponse;
+import ec.edu.ups.servicios.transaccionDeposito;
+import ec.edu.ups.servicios.transaccionDepositoResponse;
 import ec.edu.ups.servicios.TransaccionRetiro;
 import ec.edu.ups.servicios.TransaccionRetiroResponse;
 import ec.edu.ups.servicios.TransaccionTransferencia;
@@ -62,19 +62,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TransaccionDepostio }
+     * Create an instance of {@link transaccionDeposito }
      * 
      */
-    public TransaccionDepostio createTransaccionDepostio() {
-        return new TransaccionDepostio();
+    public transaccionDeposito createTransaccionDepostio() {
+        return new transaccionDeposito();
     }
 
     /**
-     * Create an instance of {@link TransaccionDepostioResponse }
+     * Create an instance of {@link transaccionDepositoResponse }
      * 
      */
-    public TransaccionDepostioResponse createTransaccionDepostioResponse() {
-        return new TransaccionDepostioResponse();
+    public transaccionDepositoResponse createTransaccionDepostioResponse() {
+        return new transaccionDepositoResponse();
     }
 
     /**
@@ -102,12 +102,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TransaccionDepostio }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link transaccionDeposito }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://servicios.ups.edu.ec/", name = "transaccionDepostio")
-    public JAXBElement<TransaccionDepostio> createTransaccionDepostio(TransaccionDepostio value) {
-        return new JAXBElement<TransaccionDepostio>(_TransaccionDepostio_QNAME, TransaccionDepostio.class, null, value);
+    public JAXBElement<transaccionDeposito> createTransaccionDepostio(transaccionDeposito value) {
+        return new JAXBElement<transaccionDeposito>(_TransaccionDepostio_QNAME, transaccionDeposito.class, null, value);
     }
 
     /**
@@ -147,12 +147,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TransaccionDepostioResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link transaccionDepositoResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://servicios.ups.edu.ec/", name = "transaccionDepostioResponse")
-    public JAXBElement<TransaccionDepostioResponse> createTransaccionDepostioResponse(TransaccionDepostioResponse value) {
-        return new JAXBElement<TransaccionDepostioResponse>(_TransaccionDepostioResponse_QNAME, TransaccionDepostioResponse.class, null, value);
+    public JAXBElement<transaccionDepositoResponse> createTransaccionDepostioResponse(transaccionDepositoResponse value) {
+        return new JAXBElement<transaccionDepositoResponse>(_TransaccionDepostioResponse_QNAME, transaccionDepositoResponse.class, null, value);
     }
 
     /**

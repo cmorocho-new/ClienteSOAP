@@ -27,11 +27,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "transaccionDepostio", propOrder = {
+@XmlType(name = "transaccionDeposito", propOrder = {
     "arg0",
     "arg1"
 })
-public class TransaccionDepostio {
+public class transaccionDeposito {
 
     protected String arg0;
     protected double arg1;
