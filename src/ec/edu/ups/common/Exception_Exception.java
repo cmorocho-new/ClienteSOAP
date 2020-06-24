@@ -1,4 +1,3 @@
-
 package ec.edu.ups.common;
 
 import javax.xml.ws.WebFault;

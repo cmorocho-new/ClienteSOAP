@@ -1,5 +1,5 @@
 
-package ec.edu.ups;
+package ec.edu.ups.vista;
 
 /**
  * Please modify this class to meet your needs
