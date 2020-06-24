@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TransaccionesSOAPService" targetNamespace="http://servicios.ups.edu.ec/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://servicios.ups.edu.ec/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://servicios.ups.edu.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="transaccionDepostio" type="tns:transaccionDepostio"/>
+      <xs:element name="transaccionDepostioResponse" type="tns:transaccionDepostioResponse"/>
+      <xs:element name="transaccionRetiro" type="tns:transaccionRetiro"/>
+      <xs:element name="transaccionRetiroResponse" type="tns:transaccionRetiroResponse"/>
+      <xs:element name="transaccionTransferencia" type="tns:transaccionTransferencia"/>
+      <xs:element name="transaccionTransferenciaResponse" type="tns:transaccionTransferenciaResponse"/>
+      <xs:complexType name="transaccionDepostio">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element name="arg1" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaccionDepostioResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaccionTransferencia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element name="arg2" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaccionTransferenciaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaccionRetiro">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element name="arg1" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaccionRetiroResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="transaccionDepostio">
+    <wsdl:part element="tns:transaccionDepostio" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="transaccionTransferencia">
+    <wsdl:part element="tns:transaccionTransferencia" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="transaccionRetiro">
+    <wsdl:part element="tns:transaccionRetiro" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="transaccionRetiroResponse">
+    <wsdl:part element="tns:transaccionRetiroResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception"/>
+  </wsdl:message>
+  <wsdl:message name="transaccionDepostioResponse">
+    <wsdl:part element="tns:transaccionDepostioResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="transaccionTransferenciaResponse">
+    <wsdl:part element="tns:transaccionTransferenciaResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="TransaccionesSOAP">
+    <wsdl:operation name="transaccionDepostio">
+      <wsdl:input message="tns:transaccionDepostio" name="transaccionDepostio"/>
+      <wsdl:output message="tns:transaccionDepostioResponse" name="transaccionDepostioResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="transaccionTransferencia">
+      <wsdl:input message="tns:transaccionTransferencia" name="transaccionTransferencia"/>
+      <wsdl:output message="tns:transaccionTransferenciaResponse" name="transaccionTransferenciaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="transaccionRetiro">
+      <wsdl:input message="tns:transaccionRetiro" name="transaccionRetiro"/>
+      <wsdl:output message="tns:transaccionRetiroResponse" name="transaccionRetiroResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransaccionesSOAPServiceSoapBinding" type="tns:TransaccionesSOAP">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="transaccionDepostio">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="transaccionDepostio">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transaccionDepostioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transaccionTransferencia">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="transaccionTransferencia">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transaccionTransferenciaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="transaccionRetiro">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="transaccionRetiro">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transaccionRetiroResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransaccionesSOAPService">
+    <wsdl:port binding="tns:TransaccionesSOAPServiceSoapBinding" name="TransaccionesSOAPPort">
+      <soap:address location="http://localhost:8080/SistemaCooperativa/TransaccionesSOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
